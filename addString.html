@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sum=BigInt(0);
+        let addString=function (num1,num2){
+            let a=BigInt(num1);
+            let b=BigInt(num2);
+            sum+=a+b;
+            let result=sum.toString();
+            return result
+            
+        }
+        console.log(addString("11","123"));
+        
+    </script>
+</body>
+</html>
