@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function merge(nums1,m,nums2,n){
+            
+             nums1 = nums1.slice(0, m).concat(nums2.slice(0, n)).sort();
+             return nums1
+        }
+        console.log(merge([1,2,3,0,0,0],3,[2,5,6],3));
+        
+    </script>
+</body>
+</html>
