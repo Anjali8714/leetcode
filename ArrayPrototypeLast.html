@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><script>
+    let removeDuplicates = function(nums) {
+        const arr=nums.filter((element ,index ,self) => self.indexOf(element) === index);
+        for(let i=0;i<arr.length;i++){
+            nums[i]=arr[i];}
+            for(let i=arr.length;i<nums.length;i++)
+            {
+         nums[i]="_";
+        }
+    console.log(arr.length);
+     
+    }
+    removeDuplicates([1,1,2])  
+</script>  
+</body>
+</html>
+<!-- // const arr=[null,[],3];
+// let element=arr.length-1;
+// if(arr.length === 0){
+//     console.log(-1);
+// }else {
+//     console.log(arr[element]);
+// }   
+
+
+// Remove Duplicates of Array 
+
+
+  
+
+
+// const arr =[2,2,2,3,3,3,4,5,6,6]
+
+// let result = arr.filter((element,index,self)=>self.indexOf(element)===index);
+// console.log(result);
+
+    -->
