@@ -1,8 +1,16 @@
 const SearchInsertPosition = function (nums , target){
     if(nums.includes(target)){
-        console.log(nums.indexOf(target));
+       return nums.indexOf(target)
     }else {
-        if
+         for(i=0;i<=nums.length;i++){
+            if(i==nums.length)
+                return i
+            if(nums[i]>target){
+                return i
+                
+            }
+            
+         }
     }
 }
-SearchInsertPosition([1,3,5,6] , 2);
+console.log(SearchInsertPosition([1,3,5,6] , 2));
