@@ -1,21 +1,15 @@
 const CountPrime = (n) => {
-    let count = 0;
-    
-    for (let i = 2; i < n; i++) {
-        let isPrime = true;
-        for (let j = 2; j <= Math.sqrt(i); j++) {
-            if (i % j === 0) {
-                isPrime = false;
-                break; 
-            }
+    count = 0;
+ for(i=2 ; i<n ; i++){
+    for(j=2 ; j<=i ; j++){
+        if(i % j != 0){
+            count ++
         }
-        if (isPrime) {
-            count++;
-        }
+        break;
     }
-
-    return count;
+ }
+ return count
 }
 
- console.log(CountPrime(3));
+ console.log(CountPrime(10));
  
