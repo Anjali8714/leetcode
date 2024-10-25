@@ -18,12 +18,5 @@ for(i=0;i<splitedvalue.length;i++){
     
 }
 
-
-       
-        
- 
- 
-}
-
-console.log(ValidParanthesis("{()"));
+console.log(ValidParanthesis("{()}"));
 
