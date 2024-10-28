@@ -1,15 +1,26 @@
-const CountPrime = (n) => {
-    count = 0;
- for(i=2 ; i<n ; i++){
-    for(j=2 ; j<=i ; j++){
-        if(i % j != 0){
-            count ++
-        }
-        break;
-    }
- }
- return count
-}
+var countPrimes = function(n) {
+    let count = 0;
 
- console.log(CountPrime(10));
+    function isPrime(num) {
+        if (num <= 1) return false;
+        if (num <= 3) return true; 
+        if (num % 2 === 0 || num % 3 === 0) return false; 
+        
+       
+        for (let i = 5; i * i <= num; i += 6) {
+            if (num % i === 0 || num % (i + 2) === 0) return false;
+        }
+        return true;
+    }
+
+   
+    for (let i = 2; i < n; i++) {
+        if (isPrime(i)) count++;
+    }
+
+    return count;
+};
+
+
+ console.log(countPrimes(10));
  
