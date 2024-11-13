@@ -4,3 +4,4 @@ let product = splited.reduce((acc,item) => acc*item);
 let sum = splited.reduce((acc,item) => acc+item);
 let result = product-sum;
 console.log(result);
+ 
