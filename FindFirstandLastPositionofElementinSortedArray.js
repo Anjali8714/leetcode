@@ -1,25 +1,14 @@
-const findPosition= (nums,target)=>{ 
-    let start = 0;
-    let end = nums.length-1;
-    let res1 = -1
-    let res2 = -1
-
-    while(start <= end){
-
-        if(nums[start] === target){
-             res1 = start
-        }else{
-        start ++
+let searchRange = function(nums, target) {
+    let arr = [];
+    if (nums.includes(target)) {
+        for (let i = 0; i < nums.length; i++) {
+            if (nums[i] == target) {
+                arr.push(i);
+            }
         }
-         if(nums[end] === target){
-             res2 = end
-        }else{
-        end --
-        }
-    if(res1!= -1 && res2 !=-1){
-        return [res1, res2]
+        arr.length == 1 ? arr.push(arr[0]) : arr = [arr[0], arr[arr.length - 1]];
+        return arr;
     }
-    }
-    return [res1,res2]
-}
-console.log(findPosition([5,7,7,8,8,10],8));
+    return arr = [-1, -1];
+};
+console.log(searchRange([5,7,7,8,8,10],8));
